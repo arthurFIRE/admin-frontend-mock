@@ -16,9 +16,6 @@ import {
   BarChartOutlined,
   LineChartOutlined,
   EyeOutlined,
-  SettingOutlined,
-  LockOutlined,
-  SafetyCertificateOutlined,
   NotificationOutlined,
   KeyOutlined,
 } from '@ant-design/icons';
@@ -116,28 +113,11 @@ const rawMenuItems: RawMenuItem[] = [
     ],
   },
 
-  // ── 1뎁스: 시스템
+  // ── 1뎁스: 샘플 폼
   {
-    key: 'system',
-    label: '시스템',
-    icon: <SettingOutlined />,
-    children: [
-      // 2뎁스: 환경 설정 (단일 페이지)
-      { key: '/system/settings', label: '환경 설정', icon: <SettingOutlined /> },
-      // 2뎁스: 보안 (하위 페이지 포함)
-      {
-        key: 'system-security',
-        label: '보안',
-        icon: <LockOutlined />,
-        children: [
-          // 3뎁스
-          { key: '/system/security/access', label: '접근 권한', icon: <SafetyCertificateOutlined /> },
-          { key: '/system/security/policy', label: '로그인 정책' },
-        ],
-      },
-      // 2뎁스: 샘플 폼 (단일 페이지)
-      { key: '/sample', label: '샘플 폼', icon: <FormOutlined /> },
-    ],
+    key: '/sample',
+    label: '샘플 폼',
+    icon: <FormOutlined />,
   },
 ];
 
